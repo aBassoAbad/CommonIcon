@@ -76,6 +76,9 @@ public class Menu extends AppCompatActivity {
                 for(int i = 0; i < response.body().size();i++){
                     puntuaciones += "Modo "+response.body().get(i).getModo()+": "+response.body().get(i).getPuntuacion()+" puntos\n";
                 }
+                if(puntuaciones.equals("")){
+                    puntuaciones = "Tu cuenta no tiene registrada ninguna puntuación.";
+                }
                 txtPuntuaciones.setText(puntuaciones);
             }
 
