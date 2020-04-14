@@ -15,6 +15,9 @@ import com.example.commonicon.Retrofit.Repositorio;
 import com.example.commonicon.Retrofit.RetrofitService;
 import com.example.commonicon.Retrofit.Usuarios;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -115,26 +118,49 @@ public class Registro extends AppCompatActivity {
 
     }
     public void registro(View view){
-        RetrofitService service = Repositorio.getUserService();
-        service.insertUser(txtNombre.getText().toString(), txtEmail.getText().toString(), txtContrasenna.getText().toString()).enqueue(new Callback<Usuarios>() {
+        // sacado de http://sujeet9.blogspot.com/2017/02/email-id-validation-in-android.html
+        String formatoEmail = "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
 
-            @Override
-            public void onResponse(Call<Usuarios> call, Response<Usuarios> response) {
-                if(response.body().getResponse().equals("Registrado correctamente")){
-                    onBackPressed();
-                    overridePendingTransition(R.anim.right_in, R.anim.right_out);
-                }else if(response.body().getResponse().equals("Ya hay un usuario con ese email")){
-                    Toast.makeText(Registro.this, "Ya hay un usuario con ese email.", Toast.LENGTH_LONG).show();
-                }else if(response.body().getResponse().equals("Ya hay un usuario con ese nombre")){
-                    Toast.makeText(Registro.this, "Ya hay un usuario con ese nombre.", Toast.LENGTH_LONG).show();
+                "\\@" +
+
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+
+                "(" +
+
+                "\\." +
+
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+
+                ")+";
+
+        Matcher matcher= Pattern.compile(formatoEmail).matcher(txtEmail.getText().toString());
+
+        if(matcher.matches()){
+            RetrofitService service = Repositorio.getUserService();
+            service.insertUser(txtNombre.getText().toString(), txtEmail.getText().toString(), txtContrasenna.getText().toString()).enqueue(new Callback<Usuarios>() {
+
+                @Override
+                public void onResponse(Call<Usuarios> call, Response<Usuarios> response) {
+                    if(response.body().getResponse().equals("Registrado correctamente")){
+                        onBackPressed();
+                        overridePendingTransition(R.anim.right_in, R.anim.right_out);
+                    }else if(response.body().getResponse().equals("Ya hay un usuario con ese email")){
+                        Toast.makeText(Registro.this, "Ya hay un usuario con ese email.", Toast.LENGTH_LONG).show();
+                    }else if(response.body().getResponse().equals("Ya hay un usuario con ese nombre")){
+                        Toast.makeText(Registro.this, "Ya hay un usuario con ese nombre.", Toast.LENGTH_LONG).show();
+                    }
                 }
-            }
 
-            @Override
-            public void onFailure(Call<Usuarios> call, Throwable t) {
-                Log.i("fallo", "onFailure: "+t);
-            }
-        });
+                @Override
+                public void onFailure(Call<Usuarios> call, Throwable t) {
+                    Log.i("fallo", "onFailure: "+t);
+                }
+            });
+        }else{
+            Toast.makeText(Registro.this, "El email no tiene un formato válido.", Toast.LENGTH_LONG).show();
+        }
+
+
     }
 
     @Override
