@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoMenu"
+    android:orientation="vertical"
+    tools:context=".Menu">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/carta2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/butt1Jugador"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="134dp"
+            android:background="@drawable/my_buttons"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:onClick="unJugador"
+            android:text="1 Jugador"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/blanco"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/butt2Jugadores"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/my_buttons"
+            android:onClick="dosJugadores"
+            android:padding="5dp"
+            android:text="2 Jugadores"
+            android:textColor="@color/blanco"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/butt1Jugador" />
+
+        <Button
+            android:id="@+id/buttMultijugador"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:background="@drawable/my_buttons"
+            android:text="Multijugador"
+            android:textColor="@color/blanco"
+            android:padding="5dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/butt2Jugadores" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:text="Powered by Alejandro Basso"
+            android:textColor="@color/amarillo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:clickable="true"
+            android:onClick="datosUsuario"
+            android:text=""
+            android:textColor="@color/blanco"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
