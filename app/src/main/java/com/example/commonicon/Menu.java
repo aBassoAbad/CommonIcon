@@ -18,7 +18,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.commonicon.Retrofit.Puntuaciones;
 import com.example.commonicon.Retrofit.Repositorio;
 import com.example.commonicon.Retrofit.RetrofitService;
-import com.example.commonicon.Retrofit.Usuarios;
 
 import java.util.List;
 
@@ -140,5 +139,92 @@ public class Menu extends AppCompatActivity {
         mpClick.start();
         Intent intent = new Intent(this, ModoDosJugadores.class);
         startActivity(intent);
+    }
+
+    public void ranking(View v){
+        mpClick.start();
+        myDialog.getWindow().setGravity(Gravity.TOP);
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.fondoOscuro)));
+        myDialog.show();
+        Button progresivo, unminuto;
+        myDialog.setContentView(R.layout.popup_ranking);
+        final TextView txtranking, txtranking2;
+        txtranking =  myDialog.findViewById(R.id.textViewRanking);
+        txtranking2 =  myDialog.findViewById(R.id.textViewRanking2);
+        progresivo = myDialog.findViewById(R.id.buttPogresivo);
+        unminuto = myDialog.findViewById(R.id.unminuto);
+        RetrofitService service = Repositorio.getUserService();
+        service.getPuntuacionProgresivo().enqueue(new Callback<List<Puntuaciones>>() {
+            @Override
+            public void onResponse(Call<List<Puntuaciones>> call, Response<List<Puntuaciones>> response) {
+                String texto = "";
+                String texto2 = "";
+                for(int i = 0; i < response.body().size();i++){
+                    texto += (i+1)+". "+response.body().get(i).getUsuario()+"\n";
+                    texto2 += response.body().get(i).getPuntuacion()+" puntos\n";
+                }
+                txtranking.setText(texto);
+                txtranking2.setText(texto2);
+            }
+
+            @Override
+            public void onFailure(Call<List<Puntuaciones>> call, Throwable t) {
+
+            }
+        });
+
+        progresivo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mpClick.start();
+                RetrofitService service = Repositorio.getUserService();
+                service.getPuntuacionProgresivo().enqueue(new Callback<List<Puntuaciones>>() {
+                    @Override
+                    public void onResponse(Call<List<Puntuaciones>> call, Response<List<Puntuaciones>> response) {
+
+                        String texto = "";
+                        String texto2 = "";
+                        for(int i = 0; i < response.body().size();i++){
+                            texto += (i+1)+". "+response.body().get(i).getUsuario()+"\n";
+                            texto2 += response.body().get(i).getPuntuacion()+" puntos\n";
+                        }
+                        txtranking.setText(texto);
+                        txtranking2.setText(texto2);
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<Puntuaciones>> call, Throwable t) {
+
+                    }
+                });
+            }
+        });
+
+        unminuto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mpClick.start();
+                RetrofitService service = Repositorio.getUserService();
+                service.getPuntuacion1Minuto().enqueue(new Callback<List<Puntuaciones>>() {
+                    @Override
+                    public void onResponse(Call<List<Puntuaciones>> call, Response<List<Puntuaciones>> response) {
+
+                        String texto = "";
+                        String texto2 = "";
+                        for(int i = 0; i < response.body().size();i++){
+                            texto += (i+1)+". "+response.body().get(i).getUsuario()+"\n";
+                            texto2 += response.body().get(i).getPuntuacion()+" puntos\n";
+                        }
+                        txtranking.setText(texto);
+                        txtranking2.setText(texto2);
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<Puntuaciones>> call, Throwable t) {
+
+                    }
+                });
+            }
+        });
     }
 }

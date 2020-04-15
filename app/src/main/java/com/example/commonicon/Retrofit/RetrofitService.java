@@ -32,4 +32,10 @@ public interface RetrofitService {
 
     @GET("obtenerPuntuacionesUsuario.php")
     Call<List<Puntuaciones>> getPuntuacionUsuario(@Query("usuario") String usuario);
+
+    @GET("obtenerPuntuacionesProgresivo.php")
+    Call<List<Puntuaciones>> getPuntuacionProgresivo();
+
+    @GET("obtenerPuntuaciones1Minuto.php")
+    Call<List<Puntuaciones>> getPuntuacion1Minuto();
 }

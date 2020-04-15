@@ -61,6 +61,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/butt2Jugadores" />
 
+        <Button
+            android:id="@+id/buttMarcadores"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/my_buttons"
+            android:onClick="ranking"
+            android:padding="5dp"
+            android:text="Ranking"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/blanco"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttMultijugador" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
