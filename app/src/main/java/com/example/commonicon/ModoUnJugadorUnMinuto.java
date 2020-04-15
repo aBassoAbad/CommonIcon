@@ -256,9 +256,9 @@ public class ModoUnJugadorUnMinuto extends AppCompatActivity {
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
                         break;
                 }
 
@@ -281,9 +281,9 @@ public class ModoUnJugadorUnMinuto extends AppCompatActivity {
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
                         break;
                 }
 
@@ -306,9 +306,9 @@ public class ModoUnJugadorUnMinuto extends AppCompatActivity {
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
                         break;
                 }
 
@@ -331,9 +331,9 @@ public class ModoUnJugadorUnMinuto extends AppCompatActivity {
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
                         break;
                 }
 
@@ -356,9 +356,9 @@ public class ModoUnJugadorUnMinuto extends AppCompatActivity {
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
                         break;
                 }
 
@@ -381,9 +381,9 @@ public class ModoUnJugadorUnMinuto extends AppCompatActivity {
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
                         break;
                 }
 
