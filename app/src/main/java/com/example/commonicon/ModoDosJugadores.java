@@ -196,17 +196,17 @@ public class ModoDosJugadores extends AppCompatActivity {
                 switch (tamanio) {
                     case 1:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 50, 50, true);
 
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
 
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 100, 100, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
                         break;
                 }
 
@@ -221,17 +221,17 @@ public class ModoDosJugadores extends AppCompatActivity {
                 switch (tamanio) {
                     case 1:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 50, 50, true);
 
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
 
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 100, 100, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
                         break;
                 }
 
@@ -246,17 +246,17 @@ public class ModoDosJugadores extends AppCompatActivity {
                 switch (tamanio) {
                     case 1:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 50, 50, true);
 
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
 
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 100, 100, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
                         break;
                 }
 
@@ -271,17 +271,17 @@ public class ModoDosJugadores extends AppCompatActivity {
                 switch (tamanio) {
                     case 1:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 50, 50, true);
 
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
 
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 100, 100, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
                         break;
                 }
 
@@ -296,17 +296,17 @@ public class ModoDosJugadores extends AppCompatActivity {
                 switch (tamanio) {
                     case 1:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 50, 50, true);
 
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
 
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 100, 100, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
                         break;
                 }
 
@@ -321,17 +321,17 @@ public class ModoDosJugadores extends AppCompatActivity {
                 switch (tamanio) {
                     case 1:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 50, 50, true);
 
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
 
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
-                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 100, 100, true);
+                        newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 75, 75, true);
                         break;
                 }
 
