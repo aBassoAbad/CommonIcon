@@ -10,7 +10,7 @@ public interface RetrofitService {
     @GET("pruebaConsulta.php")
     Call<Usuarios> getUsuarios();
 
-    @GET("pruebaConsultaParametros.php")
+    @GET("obtenerUsuariosEmail.php")
     Call<Usuarios> getUsuariosEmail(@Query("email_param") String nombre);
 
     @GET("registro.php")

@@ -7,7 +7,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Repositorio {
-    private static final String ROOTURL = "http://www.iesmurgi.org:86/~basso/";
+    private static final String ROOTURL = "http://82.223.117.34/~basso/";
     private static final long TIME_OUT = 10;
 
     private static Retrofit getRetrofitInstance(){
