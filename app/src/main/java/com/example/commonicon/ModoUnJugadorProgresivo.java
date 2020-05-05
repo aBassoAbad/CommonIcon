@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,7 +37,7 @@ import retrofit2.Response;
 public class ModoUnJugadorProgresivo extends AppCompatActivity {
 
     ImageButton button, button2, button3, button4, button5, button6;
-    ImageView image1, image2, image3, image4, image5, image6;
+    ImageView image1, image2, image3, image4, image5, image6, carta2;
     ProgressBar p;
     Carta[] cartasEnMesa;
     Baraja baraja;
@@ -53,6 +54,7 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
     int[] sonidos = {R.raw.click, R.raw.correcto, R.raw.incorrecto, R.raw.cuenta_atras};
     String usuario;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +65,7 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
         pts = findViewById(R.id.txtPts);
         puntos = findViewById(R.id.txtPuntos);
         contador = 0;
+        carta2 = findViewById(R.id.imageView2);
 
         this.button = findViewById(R.id.imageButton1);
         this.button2 = findViewById(R.id.imageButton2);
@@ -186,6 +189,8 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
         Bitmap bitmap2 = null;
         Bitmap newbitMap2 = null;
 
+
+
         for (int i = 0; i < 6; i++) {
             int direccion = (int) (Math.random() * 7 + 1);
             direccion = direccion * 45;
@@ -197,12 +202,11 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
                 draw = getResources().getDrawable(idImagen1);
                 draw2 = getResources().getDrawable(idImagen7);
 
-
                 int tamanio = (int) (Math.random() * 2 + 1);
                 switch (tamanio) {
                     case 1:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 70, 70, true);
 
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
                         newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
@@ -210,7 +214,7 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 65, 65, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
                         newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
                         break;
@@ -223,11 +227,12 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
                 image2.setRotation(direccion);
                 draw = getResources().getDrawable(idImagen2);
                 draw2 = getResources().getDrawable(idImagen8);
+
                 int tamanio = (int) (Math.random() * 2 + 1);
                 switch (tamanio) {
                     case 1:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 70, 70, true);
 
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
                         newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
@@ -235,7 +240,7 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 65, 65, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
                         newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
                         break;
@@ -243,6 +248,22 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
 
                 button2.setImageBitmap(newbitMap);
                 image2.setImageBitmap(newbitMap2);
+                carta2.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        int height = carta2.getHeight(); //height is ready
+                        int width = carta2.getWidth();
+
+
+                        RelativeLayout.LayoutParams rel_btn = new RelativeLayout.LayoutParams(
+                                RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+                        rel_btn.leftMargin = (width /10)*6+button2.getWidth()/2;
+                        rel_btn.topMargin = (height /10)*3;
+
+                        button2.setLayoutParams(rel_btn);
+                    }
+                });
             } else if (i == 2) {
                 button3.setRotation(direccion);
                 image3.setRotation(direccion);
@@ -252,7 +273,7 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
                 switch (tamanio) {
                     case 1:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 70, 70, true);
 
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
                         newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
@@ -260,7 +281,7 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 65, 65, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
                         newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
                         break;
@@ -268,6 +289,22 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
 
                 button3.setImageBitmap(newbitMap);
                 image3.setImageBitmap(newbitMap2);
+                carta2.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        int height = carta2.getHeight(); //height is ready
+                        int width = carta2.getWidth();
+
+
+                        RelativeLayout.LayoutParams rel_btn = new RelativeLayout.LayoutParams(
+                                RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+                        rel_btn.leftMargin = (width /7)*2;
+                        rel_btn.topMargin = (height /10)*7;
+
+                        button3.setLayoutParams(rel_btn);
+                    }
+                });
             } else if (i == 3) {
                 button4.setRotation(direccion);
                 image4.setRotation(direccion);
@@ -277,7 +314,7 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
                 switch (tamanio) {
                     case 1:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 70, 70, true);
 
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
                         newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
@@ -285,7 +322,7 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 65, 65, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
                         newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
                         break;
@@ -293,6 +330,22 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
 
                 button4.setImageBitmap(newbitMap);
                 image4.setImageBitmap(newbitMap2);
+                carta2.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        int height = carta2.getHeight(); //height is ready
+                        int width = carta2.getWidth();
+
+
+                        RelativeLayout.LayoutParams rel_btn = new RelativeLayout.LayoutParams(
+                                RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+                        rel_btn.leftMargin = (width /15)+button4.getWidth()/2;
+                        rel_btn.topMargin = (height /10)*3;
+
+                        button4.setLayoutParams(rel_btn);
+                    }
+                });
             } else if (i == 4) {
                 button5.setRotation(direccion);
                 image5.setRotation(direccion);
@@ -302,7 +355,7 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
                 switch (tamanio) {
                     case 1:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 70, 70, true);
 
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
                         newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
@@ -310,7 +363,7 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 65, 65, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
                         newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
                         break;
@@ -318,6 +371,22 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
 
                 button5.setImageBitmap(newbitMap);
                 image5.setImageBitmap(newbitMap2);
+                carta2.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        int height = carta2.getHeight(); //height is ready
+                        int width = carta2.getWidth();
+
+
+                        RelativeLayout.LayoutParams rel_btn = new RelativeLayout.LayoutParams(
+                                RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+                        rel_btn.topMargin = (height /10)*2-button5.getHeight()/2;
+                        rel_btn.leftMargin = (width /10)*5-button5.getWidth()/2;
+
+                        button5.setLayoutParams(rel_btn);
+                    }
+                });
             } else {
                 button6.setRotation(direccion);
                 image6.setRotation(direccion);
@@ -327,7 +396,7 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
                 switch (tamanio) {
                     case 1:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 70, 70, true);
 
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
                         newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
@@ -335,7 +404,7 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
                         break;
                     case 2:
                         bitmap = ((BitmapDrawable) draw).getBitmap();
-                        newbitMap = Bitmap.createScaledBitmap(bitmap, 75, 75, true);
+                        newbitMap = Bitmap.createScaledBitmap(bitmap, 65, 65, true);
                         bitmap2 = ((BitmapDrawable) draw2).getBitmap();
                         newbitMap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
                         break;
@@ -343,6 +412,22 @@ public class ModoUnJugadorProgresivo extends AppCompatActivity {
 
                 button6.setImageBitmap(newbitMap);
                 image6.setImageBitmap(newbitMap2);
+                carta2.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        int height = carta2.getHeight(); //height is ready
+                        int width = carta2.getWidth();
+
+
+                        RelativeLayout.LayoutParams rel_btn = new RelativeLayout.LayoutParams(
+                                RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+                        rel_btn.leftMargin = (width /10)*6;
+                        rel_btn.topMargin = (height /10)*7-button6.getWidth()/2;
+
+                        button6.setLayoutParams(rel_btn);
+                    }
+                });
             }
         }
 
